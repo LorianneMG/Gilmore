@@ -15,7 +15,8 @@ body {
 }
 
 a {
-  color: #e43c5c;
+  /* color: #e43c5c; */
+  color: #9900ff;
   text-decoration: none;
 }
 
@@ -640,46 +641,6 @@ section {
 
 .features .icon-box:hover a {
   color: #e43c5c;
-}
-
-/*--------------------------------------------------------------
-# Cta
---------------------------------------------------------------*/
-
-.cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cta-bg.jpg") center center;
-  background-size: cover;
-  padding: 60px 0;
-}
-
-.cta h3 {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.cta p {
-  color: #fff;
-}
-
-.cta .cta-btn {
-  font-family: "Nunito", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 28px;
-  border-radius: 25px;
-  transition: 0.5s;
-  margin-top: 10px;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.cta .cta-btn:hover {
-  background: #e43c5c;
-  border: 2px solid #e43c5c;
 }
 
 @media (min-width: 1024px) {
