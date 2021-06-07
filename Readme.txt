@@ -15,3 +15,10 @@ fix or remove nav links on details page
 add awards etc
 
 add skills and knowledge
+
+
+
+
+
+800 x 427 screen images.
+800 x 600 main images. 
