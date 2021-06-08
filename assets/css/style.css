@@ -608,49 +608,9 @@ section {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Features
---------------------------------------------------------------*/
-
-.features {
-  padding-top: 20px;
-}
-
-.features .icon-box {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  transition: ease-in-out 0.3s;
-  box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
-}
-
-.features .icon-box i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 1;
-}
-
-.features .icon-box h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-}
-
-.features .icon-box h3 a {
-  color: #493c3e;
-  transition: ease-in-out 0.3s;
-}
-
-.features .icon-box:hover a {
-  color: #e43c5c;
-}
-
-@media (min-width: 1024px) {
-  .cta {
-    background-attachment: fixed;
-  }
+.imgsz {
+  width: 150px;
+  height: 150px;
 }
 
 /*--------------------------------------------------------------
@@ -1231,9 +1191,4 @@ section {
   background: #d01d3f;
   color: #fff;
   text-decoration: none;
-}
-
-img {
-  width: 150px;
-  height: 150px;
 }
