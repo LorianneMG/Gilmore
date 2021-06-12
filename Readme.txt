@@ -6,15 +6,9 @@ move the LinkedIn button
 
 upload assignments to github and add links
 
-simplify the redundencies (every page has the same header so just require header)
+add awards etc?
 
-reconnect all style pages
-
-fix or remove nav links on details page
-
-add awards etc
-
-add skills and knowledge
+figure out what you want to do with the footer
 
 
 

@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #e43c5c;
+  background: #9900ff;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #e9607a;
+  background: #ff0099;
   color: #fff;
 }
 
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled, #header.header-inner-pages {
-  background: rgba(0, 0, 0, 0.9);
+  background: #9900ff83;
   padding: 12px 0;
 }
 
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #e43c5c;
+  background-color: #ff0099;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -373,8 +373,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h3 {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  /* background: #9900ff; */
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  color: #000;
+  font-weight: bold;
   font-size: 26px;
   padding: 10px 30px;
   margin-bottom: 30px;
@@ -411,8 +414,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #e43c5c;
-  border: 2px solid #e43c5c;
+  background-color: rgb(56, 5, 90);
+  box-shadow: 10px 10px 99px 6px rgba(153, 0, 255, 1);
+  border: 2px solid #9900ff;
 }
 
 @media (min-width: 1024px) {
@@ -461,14 +465,14 @@ section {
 }
 
 .section-title h2 {
-  font-size: 13px;
+  font-size: 50px;
   letter-spacing: 1px;
   font-weight: 700;
   padding: 8px 20px;
   line-height: 1;
   margin: 0;
-  background: #fdeff2;
-  color: #e43c5c;
+  background: #5f0a87;
+  color: #fff;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -500,7 +504,8 @@ section {
 --------------------------------------------------------------*/
 
 .about {
-  background: #18d26e;
+  background-image: url("../img/aurora.jpg");
+  background-size: cover;
 }
 
 .about .content h3 {
@@ -508,31 +513,36 @@ section {
   font-size: 26px;
 }
 
-.about .content ul {
+/* .about .content ul {
   list-style: none;
   padding: 0;
-}
+} */
 
-.about .content ul li {
+/* .about .content ul li {
   padding-left: 28px;
   position: relative;
-}
+} */
 
-.about .content ul li+li {
+/* .about .content ul li+li {
   margin-top: 10px;
-}
+} */
 
-.about .content ul i {
+/* .about .content ul i {
   position: absolute;
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #e43c5c;
+  color: green;
   line-height: 1;
-}
+} */
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.opaque {
+  background-color: hsla(0, 0%, 100%, 0.39);
+  align-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -641,7 +651,7 @@ section {
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #e43c5c;
+  background: #ff0099;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -667,7 +677,7 @@ section {
   bottom: -50px;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: #e43c5c;
+  background: #5f0a87;
   padding: 15px 20px;
 }
 
@@ -693,7 +703,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #f7c2cc;
+  color: darkturquoise;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -731,16 +741,16 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #e43c5c;
+  border: 1px solid #ff0099;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #e43c5c;
+  background-color: #ff0099;
 }
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(73, 60, 62, 0.08);
+  box-shadow: 0px 0 20px #5f0a87;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -748,6 +758,7 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  color: #9900ff;
   border-bottom: 1px solid #eee;
 }
 
@@ -763,12 +774,14 @@ section {
 
 .portfolio-details .portfolio-description {
   padding-top: 30px;
+  padding-left: 30px;
 }
 
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #5f0a87;
 }
 
 .portfolio-details .portfolio-description p {
@@ -797,13 +810,12 @@ section {
 .faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #e43c5c;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   padding-left: 25px;
   cursor: pointer;
-  color: #d01d3f;
+  color: #5f0a87;
   transition: 0.3s;
 }
 
@@ -828,7 +840,7 @@ section {
 }
 
 .faq .faq-list .collapsed:hover {
-  color: #e43c5c;
+  color: #C70077;
 }
 
 .faq .faq-list .collapsed .icon-show {
@@ -858,7 +870,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #e43c5c;
+  color: #5f0a87;
   float: left;
   width: 44px;
   height: 44px;
@@ -890,7 +902,7 @@ section {
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #e43c5c;
+  background: #5f0a87;
   color: #fff;
 }
 
@@ -952,7 +964,8 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #e43c5c;
+  border-color: #ff0099;
+  box-shadow: 2px 2px 10px 2px rgba(153, 0, 255, 4);
 }
 
 .contact .php-email-form input {
@@ -964,8 +977,8 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #e43c5c;
-  border: 0;
+  background-color: rgb(56, 5, 90);
+  border: 2px solid rgb(56, 5, 90);
   padding: 10px 28px;
   color: #fff;
   transition: 0.4s;
@@ -973,7 +986,8 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #d01d3f;
+  box-shadow: 10px 10px 99px 6px rgba(153, 0, 255, 1);
+  border: 2px solid #9900ff;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1048,7 +1062,7 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
+  background: #f6f4f4;
 }
 
 #footer .footer-top .footer-contact {
