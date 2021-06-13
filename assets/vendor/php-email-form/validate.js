@@ -1,85 +1,87 @@
-/**
-* PHP Email Form Validation - v3.1
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
-*/
-// (function () {
-//   "use strict";
+const form = document.querySelector('.php-email-form');
 
-//   let forms = document.querySelectorAll('.php-email-form');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log('I have been submitted')
+    let thisForm = this
 
-//   forms.forEach( function(e) {
-//     e.addEventListener('submit', function(event) {
-//       event.preventDefault();
+    let action = thisForm.getAttribute('action');
 
-//       let thisForm = this;
+    let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
 
-//       let action = thisForm.getAttribute('action');
-//       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
+    if (!action) {
+        displayError('The form action property is not set!', error, loading)
+        return;
+    }
 
-//       if( ! action ) {
-//         displayError(thisForm, 'The form action property is not set!')
-//         return;
-//       }
-//       thisForm.querySelector('.loading').classList.add('d-block');
-//       thisForm.querySelector('.error-message').classList.remove('d-block');
-//       thisForm.querySelector('.sent-message').classList.remove('d-block');
+    const loading = document.querySelector('.loading')
+    loading.classList.add('d-block');
+    const error = document.querySelector('.error-message')
+    error.classList.remove('d-block');
+    const sent = document.querySelector('.sent-message')
+    sent.classList.remove('d-block');
 
-//       let formData = new FormData( thisForm );
+    let formData = new FormData(thisForm);
 
-//       if ( recaptcha ) {
-//         if(typeof grecaptcha !== "undefined" ) {
-//           grecaptcha.ready(function() {
-//             try {
-//               grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
-//               .then(token => {
-//                 formData.set('recaptcha-response', token);
-//                 php_email_form_submit(thisForm, action, formData);
-//               })
-//             } catch(error) {
-//               displayError(thisForm, error)
-//             }
-//           });
-//         } else {
-//           displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
-//         }
-//       } else {
-//         php_email_form_submit(thisForm, action, formData);
-//       }
-//     });
-//   });
+    if (recaptcha) {
+        if (typeof grecaptcha !== "undefined") {
+            grecaptcha.ready(function () {
+                try {
+                    grecaptcha.execute(recaptcha, { action: 'php_email_form_submit' })
+                        .then(token => {
+                            formData.set('recaptcha-response', token);
+                            php_email_form_submit(thisForm, action, formData);
+                        })
+                } catch (errorMessage) {
+                    displayError(errorMessage, error, loading)
+                }
+            });
+        } else {
 
-//   function php_email_form_submit(thisForm, action, formData) {
-//     fetch(action, {
-//       method: 'POST',
-//       body: formData,
-//       headers: {'X-Requested-With': 'XMLHttpRequest'}
-//     })
-//     .then(response => {
-//       if( response.ok ) {
-//         return response.text()
-//       } else {
-//         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
-//       }
-//     })
-//     .then(data => {
-//       thisForm.querySelector('.loading').classList.remove('d-block');
-//       if (data.trim() == 'OK') {
-//         thisForm.querySelector('.sent-message').classList.add('d-block');
-//         thisForm.reset(); 
-//       } else {
-//         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
-//       }
-//     })
-//     .catch((error) => {
-//       displayError(thisForm, error);
-//     });
-//   }
+            displayError('The reCaptcha javascript API url is not loaded!', error, loading)
+        }
+    } else {
+        // if successful go here
+        php_email_form_submit(thisForm, action, formData, loading, error);
+    }
 
-//   function displayError(thisForm, error) {
-//     thisForm.querySelector('.loading').classList.remove('d-block');
-//     thisForm.querySelector('.error-message').innerHTML = error;
-//     thisForm.querySelector('.error-message').classList.add('d-block');
-//   }
+})
 
-// })();
+
+function php_email_form_submit(thisForm, action, formData, loading, error) {
+
+
+    fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'X-Requested-With': 'XMLHttpRequest' }
+    })
+        .then(response => {
+
+            if (response.ok) {  // if successful go here
+                return response.text()
+            } else {
+                throw new Error(`${response.status} ${response.statusText} ${response.url}`);
+            }
+        })
+        .then(data => {
+            thisForm.querySelector('.loading').classList.remove('d-block');
+
+            if (data.trim() == 'OK' || data.search('ok') != -1) {  // if successful go here
+                thisForm.querySelector('.sent-message').classList.add('d-block');
+                thisForm.reset();
+            } else {
+                throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action);
+            }
+        })
+        .catch((errorMessage) => {
+            displayError(errorMessage, error, loading);
+        });
+}
+
+
+function displayError(errorMessage, error, loading) {
+    loading.classList.remove('d-block');
+    error.innerHTML = errorMessage;
+    error.classList.add('d-block');
+}

@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled, #header.header-inner-pages {
-  background: #9900ff83;
+  background: #5f0a87;
   padding: 12px 0;
 }
 
@@ -343,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/hero-bg.jpg") top center, #000;
   background-size: cover;
   position: relative;
 }
@@ -394,7 +394,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: #eee;
+  color: white;
   margin-bottom: 40px;
   font-size: 24px;
 }
@@ -465,7 +465,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 50px;
+  font-size: 30px;
   letter-spacing: 1px;
   font-weight: 700;
   padding: 8px 20px;
@@ -541,8 +541,9 @@ section {
 }
 
 .opaque {
-  background-color: hsla(0, 0%, 100%, 0.39);
+  background-color: rgba(0, 0, 0, 0.75);
   align-content: center;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -554,7 +555,6 @@ section {
 }
 
 .services .icon-box {
-  /* padding: 60px 30px; */
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -578,20 +578,10 @@ section {
 }
 
 .services .icon-box:hover::before {
-  background: #e43c5c;
+  background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
   top: 0;
   border-radius: 0px;
-}
-
-.services .icon {
-  margin-bottom: 15px;
-}
-
-.services .icon i {
-  font-size: 48px;
-  line-height: 1;
-  color: #e43c5c;
-  transition: all 0.3s ease-in-out;
 }
 
 .services .title {
@@ -651,7 +641,7 @@ section {
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #ff0099;
+  background: #5f0a87;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -931,7 +921,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #ff0099;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -979,7 +969,7 @@ section {
 .contact .php-email-form button[type="submit"] {
   background-color: rgb(56, 5, 90);
   border: 2px solid rgb(56, 5, 90);
-  padding: 10px 28px;
+  padding: 10px 33px;
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
