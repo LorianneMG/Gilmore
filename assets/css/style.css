@@ -1451,3 +1451,103 @@ color: #000; */
   /* z-index: 20; */
   /* position: relative; */
 }
+
+
+/* ====================== RESUME CSS ===================== */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Description Text */
+.describetext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background-color: #474747;
+  border: 2px ridge #d3d3d3;
+  border-radius: 2px;
+}
+
+.downloads-text-bg {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #ca95ca45;
+  border-radius: 5px;
+  border: 4px double black;
+}
+
+.downloads {
+  line-height: 2rem;
+}
+
+.resume {
+  border: 2px solid black;
+  background-color: #ca95ca45;
+  height: auto;
+  width: 100%;
+  margin: 2rem;
+}
+
+.resume:hover {
+  transform: scale(102%);
+  border: 2px solid black;
+  border-radius: 10px;
+  opacity: 75%;
+}
+
+.resume-dl {
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+.technicalPicture>div {
+  position: absolute;
+
+}
+
+.technicalPictureHover:hover+.overlay {
+  display: block;
+}

@@ -222,3 +222,16 @@ function Unhide() {
 function Hide() {
   document.getElementById("hiddenCode").style.display = "none";
 }
+
+
+
+// Open the Modal
+function openResumeModal() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+
+// Close the Modal
+function closeResumeModal() {
+  document.getElementById("resumeModal").style.display = "none";
+}
+

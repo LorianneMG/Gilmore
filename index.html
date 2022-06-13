@@ -27,6 +27,20 @@
 </head>
 
 <body>
+  <!-- Resume Modal -->
+  <!-- The Modal -->
+  <div id="resumeModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="closeResumeModal()">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <div class="modal-content" id="img01">
+      <div class="describetext">L Gilmore</div>
+      <img src="assets/Gilmore-Resume2022-Image.jpg">
+    </div>
+
+  </div>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
@@ -555,6 +569,43 @@
         </ul>
       </div>
     </section><!-- End F.A.Q Section -->
+
+
+    <!-- Resume -->
+
+    <!-- Download -->
+    <div class="d-none d-lg-block col-md-6 mx-auto downloads-text-bg">
+      <h4>Resume Download</h4>
+      <div class="row">
+        <div class="col-0 col-lg-4"></div>
+        <div class="col-lg-8">
+          <ul class="downloads">
+            <li><a href="assets/Gilmore-Resume2022-Image.jpg" download="LGilmore_Resume">.PDF</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Resume Preview -->
+    <div class="col-0 col-lg-6 resume-dl">
+      <div class="row">
+        <div class="col-10 technicalPicture">
+          <img src="assets/Gilmore-Resume2022-Image.jpg" alt="L Gilmore Technical Resume"
+            class="resume align-content-center highlights technicalPictureHover" onclick="openResumeModal()"
+            id="resumePicture" style="z-index: 1">
+          <div class="overlay" style="z-index: 2">Click to Enlarge</div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
