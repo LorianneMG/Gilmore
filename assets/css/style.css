@@ -8,6 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "QueenOfColors";
+  src: url("Gilmore/assets/QUEENOFCOLORS.TTF");
+  }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -463,6 +467,11 @@ h6 {
   #hero {
     height: 150vh;
   }
+}
+
+.heroImage {
+  width: 40%;
+  margin-top: 5rem;
 }
 
 /*--------------------------------------------------------------
