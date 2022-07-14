@@ -8,14 +8,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-@font-face {
-  font-family: 'queenofcolorsregular';
-  src: url('queenofcolors-webfont.woff2') format('woff2'),
-       url('queenofcolors-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -127,7 +119,7 @@ h6 {
   padding: 0;
   display: flex;
   list-style: none;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .navbar li {
