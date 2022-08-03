@@ -601,7 +601,7 @@ color: #000; */
   overflow: visible;
 }
 
-.services .row{
+.services .row {
   box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
   transition: all 0.3s ease-in-out;
 }
@@ -636,10 +636,12 @@ color: #000; */
   top: 0;
   border-radius: 0px;
 }
+
 .services .row {
   position: relative;
 }
-.services .skills-info{
+
+.services .skills-info {
   color: #fff;
   opacity: 0;
   position: absolute;
@@ -649,16 +651,16 @@ color: #000; */
   z-index: 3;
   transition: all ease-in-out 0.3s;
   display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.skills-info p{
-  font-size:20px;
+.skills-info p {
+  font-size: 20px;
 }
 
-.services .row:hover .skills-info{
+.services .row:hover .skills-info {
   opacity: 1;
   background: rgba(19, 19, 19, 0.5);
   bottom: 0;
@@ -1361,9 +1363,9 @@ flex-direction: column;
 /*FIRST*/
 .first {
   background-color: #fea3aa;
+  width: 200px;
   /* z-index: 20; */
   /* position: relative; */
-  width: 200px;
 }
 
 /* .first:hover+.firsthalf {
@@ -1388,6 +1390,7 @@ flex-direction: column;
 /*SECOND*/
 .second {
   background-color: #f8b88b;
+  width: 200px;
   /* z-index: 20; */
   /* position: relative; */
 }
@@ -1413,6 +1416,7 @@ flex-direction: column;
 /*THIRD*/
 .third {
   background-color: #faf884;
+  width: 200px;
   /* z-index: 20; */
   /* position: relative; */
 }
@@ -1438,6 +1442,7 @@ flex-direction: column;
 /*FOURTH*/
 .fourth {
   background-color: #baed91;
+  width: 200px;
   /* z-index: 20; */
   /* position: relative; */
 }
@@ -1463,6 +1468,7 @@ flex-direction: column;
 /*FITH*/
 .fith {
   background-color: #b2cefe;
+  width: 200px;
   /* z-index: 20; */
   /* position: relative; */
 }
@@ -1489,6 +1495,7 @@ flex-direction: column;
 /*Sixth*/
 .sixth {
   background-color: #c591e4;
+  width: 200px;
   /* z-index: 20; */
   /* position: relative; */
 }
@@ -1591,4 +1598,99 @@ flex-direction: column;
 
 .technicalPictureHover:hover+.overlay {
   display: block;
+}
+
+
+
+
+/* ====================== SPLIT ======================== */
+
+
+:root {
+  /*initialize variables as will be used on the left side, standard state*/
+  --button-hover-color: rgba(161, 11, 11, 0.3);
+}
+
+h5 {
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.button {
+  text-transform: uppercase;
+  padding: 1em 2em;
+  font-size: 1rem;
+  font-weight: bold;
+  background: transparent;
+  color: #FFF;
+  border: 0.2rem #FFF solid;
+}
+
+button:hover {
+  /*sets the hover status of the buttons to a variable value*/
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+
+}
+
+.split {
+  transition: all 1s ease;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /*sets the background image and color mask, defaulted to the values corresponding to the left*/
+  background:
+    linear-gradient(var(--bg-color), var(--bg-color)) repeat-x top / 100% 100%,
+    var(--bg-url) center center no-repeat / cover;
+  padding-top: 4rem;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+.left {
+  /*NO ADITIONAL STYLES NEEDED*/
+  background-color: #804080;
+}
+
+.right {
+  /*ONLY CHANGE THE VARIABLE VALUES, and they'll apply to the correct children! :D*/
+  background-color: rgba(43, 43, 43, 0.8);
+  --button-hover-color: rgba(92, 92, 92, 0.3);
+}
+
+.split:hover {
+  /*grows an element on hover*/
+  flex-grow: 4;
+}
+
+
+@media(max-width:500px) {
+
+  /*switch flex direction for smaller screens*/
+  .container {
+    flex-direction: column;
+  }
+}
+
+.skillButtons {
+  color: white;
+}
+
+button {
+  background-color: #444444;
+}
+
+.hidden {
+  display: none;
 }
