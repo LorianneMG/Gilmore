@@ -130,7 +130,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
@@ -170,10 +170,8 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-
       }, true);
     }
-
   });
 
   /**
@@ -235,3 +233,34 @@ function closeResumeModal() {
   document.getElementById("resumeModal").style.display = "none";
 }
 
+
+
+// PORTFOLIO
+
+function viewGraphic() {
+  var element = document.getElementById("graphicView");
+  var element2 = document.getElementById("webView");
+  if (element.classList.contains("hidden") || element2.classList.contains("hidden")) {
+    element.classList.remove("hidden");
+    element2.classList.add("hidden");
+  }
+  else if (element.classList.contains("hidden") || (!element2.classList.contains("hidden"))) {
+    element.classList.remove("hidden");
+    element2.classList.add("hidden");
+  }
+  else { }
+}
+
+function viewWeb() {
+  var element = document.getElementById("webView");
+  var element2 = document.getElementById("graphicView");
+  if (element.classList.contains("hidden") || element2.classList.contains("hidden")) {
+    element.classList.remove("hidden");
+    element2.classList.add("hidden");
+  }
+  else if (element.classList.contains("hidden") || (!element2.classList.contains("hidden"))) {
+    element.classList.remove("hidden");
+    element2.classList.add("hidden");
+  }
+  else { }
+}
