@@ -8,14 +8,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-@font-face {
-  font-family: 'queenofcolorsregular';
-  src: url('queenofcolors-webfont.woff2') format('woff2'),
-       url('queenofcolors-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -143,7 +135,6 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "queenofcolorsregular", sans-serif;
   color: #fff;
   font-size: 25px;
   padding: 0 4px;
