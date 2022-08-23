@@ -59,7 +59,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #ff0099;
+  background: #ff00e6;
   color: #fff;
 }
 
@@ -157,7 +157,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #ff0099;
+  background-color: #ff00e6;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -388,9 +388,9 @@ h6 {
 }
 
 #hero h3 {
-  /* background: #9900ff; */
-  background-color: #1fd1f9;
-  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+ 
+  background-color: #00e6ff;
+  background-image: linear-gradient(315deg, #00e6ff 0%, #aa00ff 74%);
   color: #000;
   font-weight: bold;
   font-size: 26px;
@@ -405,7 +405,6 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  /* text-transform: uppercase; */
   color: #fff;
 }
 
@@ -523,8 +522,8 @@ section {
 }
 
 .paragraph {
-  background-color: #1fd1f9;
-  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  background-color: #00e6ff;
+  background-image: linear-gradient(315deg, #00e6ff 0%, #b621fe 74%);
   align-content: center;
   color: black;
   border-radius: 30px;
@@ -538,8 +537,8 @@ box-shadow: 10px 10px 99px 6px rgba(153, 0, 255, 1);
 border: 2px solid #9900ff;
 
 
-background-color: #1fd1f9;
-background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+background-color: #00e6ff;
+background-image: linear-gradient(315deg, #00e6ff 0%, #b621fe 74%);
 color: #000; */
 
 /*--------------------------------------------------------------
@@ -595,8 +594,12 @@ color: #000; */
 --------------------------------------------------------------*/
 
 .services {
-  padding-bottom: 30px;
-  background-color: #fff;
+  padding-bottom: 50px;
+  border: red solid 1rem;
+  /* the red color doesn't matter */
+  border-image: linear-gradient(-45deg, #aa00ff, #ff00e6, #00e6ff) 100;
+  padding: 5rem;
+  
 }
 
 .services .icon-box {
@@ -623,8 +626,8 @@ color: #000; */
 }
 
 .services .icon-box:hover::before {
-  background-color: #1fd1f9;
-  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  background-color: #00e6ff;
+  background-image: linear-gradient(315deg, #00e6ff 0%, #ff00e6 74%);
   top: 0;
   border-radius: 0px;
 }
@@ -753,15 +756,11 @@ color: #000; */
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #ff0099;
+  color: #ff00e6;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
   right: 15px;
-}
-
-.portfolio .portfolio-item:hover img {
-  /* top: -30px; */
 }
 
 .portfolio .portfolio-item:hover .portfolio-info {
@@ -792,11 +791,11 @@ color: #000; */
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #ff0099;
+  border: 1px solid #ff00e6;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ff0099;
+  background-color: #ff00e6;
 }
 
 .portfolio-details .portfolio-info {
@@ -986,7 +985,7 @@ color: #000; */
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #ff0099;
+  background: #ff00e6;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1021,7 +1020,7 @@ color: #000; */
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #ff0099;
+  border-color: #ff00e6;
   box-shadow: 2px 2px 10px 2px rgba(153, 0, 255, 4);
 }
 
@@ -1220,7 +1219,7 @@ color: #000; */
 }
 
 #footer .social-links a:hover {
-  background: #ff0099;
+  background: #ff00e6;
   color: #fff;
   text-decoration: none;
 }
